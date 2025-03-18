@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class PasswordChecker {
+    public static void main(String[] args) {
+        
+        final String CORRECT_PASSWORD = "C0RR3CT";
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Please enter password: ");
+        
+       String password = input.nextLine(); 
+       
+       if(password.equals(CORRECT_PASSWORD)){
+           System.out.println("You have gained access to the system!"); 
+       }
+        
+     else{
+        System.out.println("Your password is incorrect!"); 
+    }   
+        input.close(); 
+    }
+}
