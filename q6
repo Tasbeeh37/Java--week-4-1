@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class PasswordChecker {
+
+    // Constant for the correct password
+    private static final String CORRECT_PASSWORD = "C0RR3CT";
+    // Constant for the correct phone number (last 4 digits)
+    private static final String CORRECT_PHONE_LAST_DIGITS = "1234";
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt user to enter password
+        System.out.println("Please enter password: ");
+        String enteredPassword = scanner.nextLine();
+
+        // Check if the entered password matches the correct password
+        if (enteredPassword.equals(CORRECT_PASSWORD)) {
+            // If password is correct, prompt for phone number
+            System.out.println("Please enter the last 4 digits of your phone number: ");
+            String enteredPhoneLastDigits = scanner.nextLine();
+
+            // Check if the entered phone number matches the correct phone number
+            if (enteredPhoneLastDigits.equals(CORRECT_PHONE_LAST_DIGITS)) {
+                System.out.println("You have gained access to the system!");
+            } else {
+                System.out.println("Your phone number is incorrect!");
+            }
+        } else {
+            // If password is incorrect
+            System.out.println("Your password is incorrect!");
+        }
+
+        scanner.close();
+    }
+}
