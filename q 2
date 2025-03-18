@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Age{
+public static void main (String [] args) {
+    Scanner input = new Scanner(System.in);
+   
+     
+    System.out.println("Enter your age: " );
+    int age = input.nextInt();
+      System.out.println("You entered: " + age  );
+    if(age >= 21 ){
+        System.out.println("Age is a state of mind!");
+    }else{
+        System.out.println("It's great to be young!");
+    }
+    
+  input.close();
+}
+}
